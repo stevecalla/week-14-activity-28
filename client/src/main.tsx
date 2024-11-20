@@ -3,12 +3,12 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './index.css'
 
 import App from './App.tsx';
+import BattleRoom from './pages/BattleRoom.tsx';
+import Dashboard from './pages/Dashboard.tsx';
+import Login from './pages/Login.tsx';
+import TeamsRoom from './pages/TeamsRoom.tsx';
+import SignUp from './pages/SignUp.tsx';
 import ErrorPage from './pages/ErrorPage.tsx';
-import MainPage from './pages/MainPage.tsx';
-import VolunteerPage from './pages/VolunteerPage.tsx';
-import VolunteerForm from './pages/VolunteerForm.tsx';
-import EditVolunteer from './pages/EditVolunteer.tsx';
-import EditWork from './pages/EditWork.tsx';
 
 const router = createBrowserRouter([
   {
@@ -18,23 +18,23 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <MainPage />
+        element: <Dashboard />
       }, 
       {
-        path: '/show-volunteers',
-        element: <VolunteerPage />
+        path: 'login',
+        element: <Login />
       },
       {
-        path: '/new-volunteer',
-        element: <VolunteerForm />
+        path: 'teamsRoom',
+        element: <TeamsRoom />
       },
       {
-        path: '/edit-volunteer',
-        element: <EditVolunteer />
+        path: 'battleRoom',
+        element: <BattleRoom />
       },
       {
-        path: '/edit-work',
-        element: <EditWork />
+        path: 'signUp',
+        element: <SignUp />
       }
     ]
   }
@@ -46,3 +46,4 @@ if(rootElement) {
     <RouterProvider router={router} />
   );
 }
+
