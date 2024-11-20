@@ -6,6 +6,8 @@ import Footer from "./components/footer"
 
 import './App.css'
 
+console.log("hello app.tsx");
+
 function App() {
 
   const [ loginToken, setLoginToken ] = useState(localStorage.getItem('LOGIN_TOKEN') || '');
