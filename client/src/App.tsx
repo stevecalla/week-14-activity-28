@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom"
 import {useState} from "react"
 
-import Navbar from "./components/navbar.tsx"
+import NavBar from "./components/navbar.tsx"
 import Footer from "./components/footer.tsx"
 
 import './App.css'
@@ -17,7 +17,7 @@ function App() {
 
   return (
     <>
-      <Navbar context={ context }/>
+      <NavBar context={ context }/>
       <Outlet context={ context } />
       <Footer />
     </>
